@@ -34,6 +34,6 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
 
 RUN systemctl enable salt-minion
 
-VOLUME [ "/sys/fs/cgroup" ]
+VOLUME [ "/sys/fs/cgroup", "/etc/salt/minion.d", "/etc/salt/master.d"]
 
 CMD ["/lib/systemd/systemd"]

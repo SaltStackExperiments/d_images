@@ -10,6 +10,7 @@ RUN yum -q -y install salt-master initscripts &&\
     yum clean all &&\
     systemctl enable salt-master
 
+VOLUME ["/etc/salt/minion.d", "/etc/salt/master.d"]
 
 CMD ["/usr/sbin/init"]
 
